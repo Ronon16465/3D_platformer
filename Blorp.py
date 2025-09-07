@@ -5,3 +5,6 @@ for i in range(4):
 
 
 print("line 2")
+
+def end():
+    print("end")
