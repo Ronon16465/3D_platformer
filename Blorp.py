@@ -320,7 +320,7 @@ def draw_enemy(e: 'Enemy'):
     glPopMatrix()
 
 def draw_bullets():
-    glColor3f(0.25,0.45,1.0)
+    glColor3f(1.0,1.0,1.0)
     for b in bullets:
         glPushMatrix()
         glTranslatef(b['x'], b['y'], b['z'])
@@ -396,6 +396,7 @@ def draw_scene():
         cam_tgt[0] + sun_dir[0]*1200,
         cam_tgt[1] + sun_dir[1]*1200-450,
         cam_tgt[2] + sun_dir[2]*1200 +  450]
+    
     glPushMatrix()
     glTranslatef(*sun_pos)
     glColor3f(1.0, 0.95, 0.3)
@@ -639,6 +640,7 @@ def physics_step(dt):
         vz = 0.0
         coyote_time = coyote_time_max
         jump_count = 0
+    
     if hitC and vz > 0:
         vz = 0.0
 
